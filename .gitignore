@@ -1,0 +1,4 @@
+node_modules
+.next
+.env
+click_logs.txt

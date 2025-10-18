@@ -1,0 +1,24 @@
+[
+  {
+    "id": "p1",
+    "slug": "wireless-earphones",
+    "title": "Wireless Earphones X100",
+    "description": "Great sound, long battery life.",
+    "price": 1299,
+    "affiliate_url": "https://merchant.example.com/product/x100",
+    "image": "/placeholder-og.png",
+    "category": "audio",
+    "tags": ["audio","earphones"]
+  },
+  {
+    "id": "p2",
+    "slug": "smartwatch-a1",
+    "title": "Smartwatch A1",
+    "description": "Heart-rate, sleep tracking.",
+    "price": 2999,
+    "affiliate_url": "https://merchant.example.com/product/a1",
+    "image": "/placeholder-og.png",
+    "category": "wearables",
+    "tags": ["fitness","wearable"]
+  }
+]
