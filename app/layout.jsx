@@ -6,23 +6,28 @@ export const metadata = {
   description: 'Simple affiliate marketing site'
 }
 
-export default function RootLayout({ children }){
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow-sm">
-          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/" className="font-bold text-xl">AffiSite</Link>
-            <nav className="space-x-4">
-              <Link href="/">Home</Link>
-              <Link href="/">Blog</Link>
-              <Link href="/">Contact</Link>
-            </nav>
-          </div>
-        </header>
-        <main className="container mx-auto px-4 py-8">{children}</main>
-        <footer className="border-t mt-12 py-6 text-center text-sm text-gray-600">© {new Date().getFullYear()} AffiSite</footer>
+      {/* 1. We add classes to the body to set the background image.
+        2. `relative` is needed for the overlay to work correctly.
+      */}
+      <body 
+        className="relative bg-[url('/Contemporary Logo in Orange and Navy Blue (1) (1).png')] bg-cover bg-center bg-no-repeat bg-fixed"
+      >
+        {/* 3. This div is the dark overlay. It sits on top of the background
+             but behind the content. bg-black/70 means 70% transparent black.
+        */}
+        <div className="absolute inset-0 bg-black/70 z-0" />
+
+        {/* 4. This div holds your actual page content.
+             `relative` and `z-10` ensure it sits on top of the overlay.
+             We also make the text a light gray so it's readable.
+        */}
+        <main className="relative z-10 text-slate-200">
+          {children}
+        </main>
       </body>
     </html>
-  )
+  );
 }
