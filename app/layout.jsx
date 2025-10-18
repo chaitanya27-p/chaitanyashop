@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         2. `relative` is needed for the overlay to work correctly.
       */}
       <body 
-        className="relative bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"
+        className="relative bg-[url('/background.png')] bg-cover bg-center bg-no-repeat bg-fixed"
       >
         {/* 3. This div is the dark overlay. It sits on top of the background
              but behind the content. bg-black/70 means 70% transparent black.
